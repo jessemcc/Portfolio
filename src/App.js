@@ -11,6 +11,9 @@ function App() {
   return (
     <div>
       <NavBar />
+      <Header />
+      <About />
+      <Portfolio />
     </div>
   );
 }
