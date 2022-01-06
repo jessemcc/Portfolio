@@ -9,21 +9,29 @@
 .myImgContainer {
     display: flex;
     align-items: center;
-    width: 45%;
+    justify-content: center;
+    width: 40%;
 }
 
 .myImgStyle {
-    width: 60%;
+    width: 66%;
 }
 
 .aboutTextContainer {
     margin: auto;
     width: 50%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .aboutTextTitle {
     font-size: 2.2em;
+}
+
+.aboutPStyle {
+    width: 75%;
 }
 
 .fillerImgStyle {
