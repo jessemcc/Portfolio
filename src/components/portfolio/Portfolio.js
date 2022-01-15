@@ -10,15 +10,15 @@ export const Portfolio = () => {
             </div>
             <div className={PortfolioStyle.portProjectContainer}>
                 <div className={PortfolioStyle.portSoloProjectContainer}>
-                    <h5>Website 1</h5>
+                    <h5 className={PortfolioStyle.portProjectTitle}>Website 1</h5>
                     <img src={TempProjectImg} className={PortfolioStyle.portProjectImg} />
                 </div>
                 <div className={PortfolioStyle.portSoloProjectContainer}>
-                    <h5>Website 2</h5>
+                    <h5 className={PortfolioStyle.portProjectTitle}>Website 2</h5>
                     <img src={TempProjectImg} className={PortfolioStyle.portProjectImg} />
                 </div>
                 <div className={PortfolioStyle.portSoloProjectContainer}>
-                    <h5>Website 3</h5>
+                    <h5 className={PortfolioStyle.portProjectTitle}>Website 3</h5>
                     <img src={TempProjectImg} className={PortfolioStyle.portProjectImg} />
                 </div>
             </div>
