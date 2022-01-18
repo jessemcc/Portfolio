@@ -13,7 +13,7 @@ export const Contact = () => {
                 <div className={ContactStyle.containerTitle}>
                     <h2>Contact Me</h2>
                 </div>
-                <div>
+                <div className={ContactStyle.formContainer}>
                     <form>
                         <label for="name">Name: </label>
                         <input type="text" name="name" placeholder="Name" /><br /> 
