@@ -1,6 +1,16 @@
-@mixin for-phone-only {
-    @media (max-width: 420px) {@content}
-}
+@mixin for-size($size) {
+    @if $size == phone-only {
+      @media (max-width: 600px) { @content; }
+    } @else if $size == tablet-portrait-up {
+      @media (min-width: 600px) { @content; }
+    } @else if $size == tablet-landscape-up {
+      @media (min-width: 900px) { @content; }
+    } @else if $size == desktop-up {
+      @media (min-width: 1200px) { @content; }
+    } @else if $size == big-desktop-up {
+      @media (min-width: 1800px) { @content; }
+    }
+  }
 
 .contactContainer {
     width: 100%;
@@ -16,7 +26,7 @@
     justify-content: center;
     align-content: space-between;
 
-    @include for-phone-only {
+    @include for-size (phone-only) {
         display: none;
     }
 }
@@ -29,7 +39,7 @@
     align-content: space-between;
     align-items: center;
 
-    @include for-phone-only {
+    @include for-size (phone-only) {
         width: 100%;
     }
 
@@ -38,7 +48,7 @@
         margin: -20px 0;
     }
 
-    @include for-phone-only {
+    @include for-size (phone-only) {
         .containerTitle {
             font-size: 1.8em;
         }
@@ -50,7 +60,7 @@
         flex-direction: column;
         justify-content: center;
 
-        @include for-phone-only {
+        @include for-size (phone-only) {
             width: 75%;
         }
     }
@@ -67,7 +77,7 @@
         width: 100%;
     }
 
-    @include for-phone-only {
+    @include for-size (phone-only) {
         textarea {
             width: 100%;
         }
@@ -78,7 +88,7 @@
     height: 350px;
     margin: 1em auto; 
 
-    @include for-phone-only {
+    @include for-size (phone-only) {
         margin: 1em auto;
     }
 }

@@ -1,7 +1,16 @@
-@mixin for-phone-only {
-    @media (max-width: 420px) {@content}
-}
-
+@mixin for-size($size) {
+    @if $size == phone-only {
+      @media (max-width: 600px) { @content; }
+    } @else if $size == tablet-portrait-up {
+      @media (min-width: 600px) { @content; }
+    } @else if $size == tablet-landscape-up {
+      @media (min-width: 900px) { @content; }
+    } @else if $size == desktop-up {
+      @media (min-width: 1200px) { @content; }
+    } @else if $size == big-desktop-up {
+      @media (min-width: 1800px) { @content; }
+    }
+  }
 .portContainer {
     width: 100%;
     height: 750px;
@@ -11,7 +20,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
 
-    @include for-phone-only {
+    @include for-size (phone-only) {
         display: flex;
         flex-direction: column;
         background-image: none;
@@ -25,7 +34,7 @@
     text-align: center;
     font-size: 2.2em;
 
-    @include for-phone-only {
+    @include for-size (phone-only) {
         font-size: 1.8em;
         margin: -40px 0;
     }
@@ -35,7 +44,7 @@
     display: flex;
     justify-content: space-around;
     
-    @include for-phone-only {
+    @include for-size (phone-only) {
         flex-direction: column;
         width: 100%;
     } 
@@ -49,7 +58,7 @@
     width: 21%;
     font-size: 2.2em;
 
-    @include for-phone-only {
+    @include for-size (phone-only) {
         font-size: 1.8em;
         width: 100%;
     }
@@ -62,7 +71,7 @@
 .portProjectImg {
     width: 100%;
 
-    @include for-phone-only {
+    @include for-size (phone-only) {
         width: 65%;
     }
 }

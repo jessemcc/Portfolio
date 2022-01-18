@@ -1,6 +1,16 @@
-@mixin for-phone-only {
-    @media (max-width: 420px) {@content}
-}
+@mixin for-size($size) {
+    @if $size == phone-only {
+      @media (max-width: 600px) { @content; }
+    } @else if $size == tablet-portrait-up {
+      @media (min-width: 600px) { @content; }
+    } @else if $size == tablet-landscape-up {
+      @media (min-width: 900px) { @content; }
+    } @else if $size == desktop-up {
+      @media (min-width: 1200px) { @content; }
+    } @else if $size == big-desktop-up {
+      @media (min-width: 1800px) { @content; }
+    }
+  }
 
 .headerContainer {
     width: 100%;
@@ -22,7 +32,7 @@
     justify-content: center;
     align-items: center;
 
-    @include for-phone-only {
+    @include for-size (phone-only) {
         height: 75%;
         width: 65%;
         font-size: 25px;
@@ -39,7 +49,7 @@
     justify-content: center;
     align-items: center;
 
-    @include for-phone-only {
+    @include for-size (phone-only) {
         height: 100%;
         width: 120%;
         font-size: 25px;
