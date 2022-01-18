@@ -1,23 +1,44 @@
+@mixin for-phone-only {
+    @media (max-width: 420px) {@content}
+}
+
 .portContainer {
     width: 100%;
-    height: 725px;
+    height: 750px;
     background-color: #0011D1;
     background-image: url("../../media/portfolio_filler.png");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: bottom;
+
+    @include for-phone-only {
+        display: flex;
+        flex-direction: column;
+        background-image: none;
+        height: 100%;
+        padding: 20px 0;
+    }
 }
 
 .portTitle {
     width: 100%;
     text-align: center;
-    font-size: 3em;
+    font-size: 2.2em;
+
+    @include for-phone-only {
+        font-size: 1.8em;
+        margin: -40px 0;
+    }
 }
 
 .portProjectContainer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
+    
+    @include for-phone-only {
+        flex-direction: column;
+        width: 100%;
+    } 
 }
 
 .portSoloProjectContainer {
@@ -27,6 +48,11 @@
     align-items: center;
     width: 21%;
     font-size: 2.2em;
+
+    @include for-phone-only {
+        font-size: 1.8em;
+        width: 100%;
+    }
 }
 
 .portProjectTitle {
@@ -35,13 +61,8 @@
 
 .portProjectImg {
     width: 100%;
-}
 
-.portFillerImgContainer {
-    margin: auto;
-    width: 50%;
-}
-
-.portFillerImg {
-    width: 100%;
+    @include for-phone-only {
+        width: 65%;
+    }
 }
