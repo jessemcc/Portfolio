@@ -7,10 +7,11 @@ export const About = () => {
     return (
         <div className={AboutStyle.aboutContainer}>
             <div className={AboutStyle.myImgContainer}>
-                <img src={MyAboutImg} alt="A picture of me" className={AboutStyle.myImgStyle} />
+                <img src={MyAboutImg} alt="A picture of me" className={AboutStyle.myImgStyleDesktop} />
             </div>
             <div className={AboutStyle.aboutTextContainer}>
                 <h2 className={AboutStyle.aboutTextTitle}>About Me</h2>
+                <img src={MyAboutImg} alt="A picture of me" className={AboutStyle.myImgStylePhone} />
                 <p className={AboutStyle.aboutPStyle}>blah blah blah blah blah blah 
                 blah blah blah blah blah blah blah blah blah 
                 blah blah blah blah blah blah blah blah blah 
