@@ -1,20 +1,5 @@
-.listStyle { 
-    width: 100%;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 24px;
-}
-
-.listContainer {
-    width: 95%;
-}
-
-.logoContainer {
-    width: 1%;
-    display: flex;
-    align-items: center;
+@mixin for-phone-only{
+    @media (max-width: 420px) {@content}
 }
 
 .navContainer {
@@ -23,9 +8,51 @@
     background-color: #BAD7DE;
     display: flex;
     align-items: center;
+
+    @include for-phone-only {
+        height: 40px;
+        justify-content: center;
+    }
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+
+    @include for-phone-only {
+        display: none;
+    }
 }
 
 .navLogo {
     width: 70px;
     height: 70px;
+
+    @include for-phone-only {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.listContainer {
+    width: 100%;
+
+    @include for-phone-only {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.listStyle { 
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+
+    @include for-phone-only {
+        font-size: 1.0em;
+        padding: 0;
+    }
 }
