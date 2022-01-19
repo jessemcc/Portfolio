@@ -32,6 +32,10 @@
     @include for-size (tablet-portrait-up) {
       height: 600px;
     }
+
+    @include for-size (tablet-landscape-up) {
+      height: 650px;
+    }
 }
 
 .portTitle {
@@ -77,6 +81,10 @@
     margin-bottom: 15px;
 
     @include for-size (tablet-portrait-up) {
+      margin: 10px 0;
+    }
+
+    @include for-size (tablet-landscape-up) {
       margin: 10px 0;
     }
 }
