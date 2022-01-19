@@ -43,6 +43,12 @@
       width: 62%;
       font-size: 45px;
     }
+
+    @include for-size (tablet-landscape-up) {
+      height: 62%;
+      width: 57%;
+      font-size: 55px;
+    }
 }
 
 .textStyle2 {
@@ -65,5 +71,11 @@
       height: 90%;
       width: 115%;
       font-size: 45px;
+    }
+
+    @include for-size (tablet-landscape-up) {
+      height: 80%;
+      width: 110%;
+      font-size: 55px;
     }
 }
