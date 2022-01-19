@@ -7,11 +7,11 @@ export const About = () => {
     return (
         <div className={AboutStyle.aboutContainer}>
             <div className={AboutStyle.myImgContainer}>
-                <img src={MyAboutImg} alt="A picture of me" className={AboutStyle.myImgStyleDesktop} />
+                <img src={MyAboutImg} alt="This is me" className={AboutStyle.myImgStyle} />
             </div>
             <div className={AboutStyle.aboutTextContainer}>
                 <h2 className={AboutStyle.aboutTextTitle}>About Me</h2>
-                <img src={MyAboutImg} alt="A picture of me" className={AboutStyle.myImgStylePhone} />
+                <img src={MyAboutImg} alt="This is me" className={AboutStyle.myImgStylePhone} />
                 <p className={AboutStyle.aboutPStyle}>blah blah blah blah blah blah 
                 blah blah blah blah blah blah blah blah blah 
                 blah blah blah blah blah blah blah blah blah 
@@ -20,7 +20,7 @@ export const About = () => {
                 blah blah blah blah blah blah blah blah blah 
                 blah blah blah blah blah blah blah blah blah 
                 </p>
-                <img src={AboutFiller} className={AboutStyle.fillerImgStyle} />
+                <img src={AboutFiller} alt="Just filler" className={AboutStyle.fillerImgStyle} />
             </div>
         </div>
     )

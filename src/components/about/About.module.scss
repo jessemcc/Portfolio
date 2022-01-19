@@ -2,11 +2,11 @@
     @if $size == phone-only {
       @media (max-width: 600px) { @content; }
     } @else if $size == tablet-portrait-up {
-      @media (min-width: 600px) { @content; }
+      @media (max-width: 900px) { @content; }
     } @else if $size == tablet-landscape-up {
-      @media (min-width: 900px) { @content; }
+      @media (max-width: 1200px) { @content; }
     } @else if $size == desktop-up {
-      @media (min-width: 1200px) { @content; }
+      @media (max-width: 1800px) { @content; }
     } @else if $size == big-desktop-up {
       @media (min-width: 1800px) { @content; }
     }
@@ -28,18 +28,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 50%;
 
     @include for-size (phone-only) {
         width: 100%;
     }
 }
 
-.myImgStyleDesktop {
+.myImgStyle {
     width: 66%;
+    padding: 20px 0;
 
     @include for-size (phone-only) {
         display: none;
+    }
+
+    @include for-size (tablet-portrait-up) {
+        width: 90%;
     }
 }
 
@@ -55,7 +60,6 @@
 }
 
 .aboutTextContainer {
-    margin: auto;
     width: 50%;
     text-align: center;
     display: flex;

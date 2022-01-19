@@ -1,16 +1,16 @@
 @mixin for-size($size) {
-    @if $size == phone-only {
-      @media (max-width: 600px) { @content; }
-    } @else if $size == tablet-portrait-up {
-      @media (min-width: 600px) { @content; }
-    } @else if $size == tablet-landscape-up {
-      @media (min-width: 900px) { @content; }
-    } @else if $size == desktop-up {
-      @media (min-width: 1200px) { @content; }
-    } @else if $size == big-desktop-up {
-      @media (min-width: 1800px) { @content; }
-    }
+  @if $size == phone-only {
+    @media (max-width: 600px) { @content; }
+  } @else if $size == tablet-portrait-up {
+    @media (max-width: 900px) { @content; }
+  } @else if $size == tablet-landscape-up {
+    @media (max-width: 1200px) { @content; }
+  } @else if $size == desktop-up {
+    @media (max-width: 1800px) { @content; }
+  } @else if $size == big-desktop-up {
+    @media (min-width: 1800px) { @content; }
   }
+}
 
 .headerContainer {
     width: 100%;
@@ -33,9 +33,15 @@
     align-items: center;
 
     @include for-size (phone-only) {
-        height: 75%;
-        width: 65%;
-        font-size: 25px;
+      height: 75%;
+      width: 65%;
+      font-size: 25px;
+    }
+
+    @include for-size (tablet-portrait-up) {
+      height: 67%;
+      width: 62%;
+      font-size: 45px;
     }
 }
 
@@ -50,8 +56,14 @@
     align-items: center;
 
     @include for-size (phone-only) {
-        height: 100%;
-        width: 120%;
-        font-size: 25px;
+      height: 100%;
+      width: 120%;
+      font-size: 25px;
+    }
+
+    @include for-size (tablet-portrait-up) {
+      height: 90%;
+      width: 115%;
+      font-size: 45px;
     }
 }
