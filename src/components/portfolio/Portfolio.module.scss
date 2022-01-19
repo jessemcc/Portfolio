@@ -11,6 +11,7 @@
       @media (min-width: 1800px) { @content; }
     }
   }
+  
 .portContainer {
     width: 100%;
     height: 750px;
@@ -32,10 +33,10 @@
 .portTitle {
     width: 100%;
     text-align: center;
-    font-size: 2.2em;
+    font-size: 2.2rem;
 
     @include for-size (phone-only) {
-        font-size: 1.8em;
+        font-size: 1.8rem;
         margin: -40px 0;
     }
 }

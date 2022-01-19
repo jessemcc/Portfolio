@@ -32,6 +32,10 @@
     @include for-size (phone-only) {
         display: none;
     }
+
+    @include for-size (tablet-portrait-up) {
+      display: none;
+    }
 }
 
 .navLogo {
@@ -64,5 +68,9 @@
     @include for-size (phone-only) {
         font-size: 1.0em;
         padding: 0;
+    }
+
+    @include for-size (tablet-portrait-up) {
+      padding: 0;
     }
 }
