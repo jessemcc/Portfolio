@@ -4,7 +4,7 @@ import PortfolioStyle from "./Portfolio.module.scss";
 
 export const Portfolio = () => {
     return (
-        <div className={PortfolioStyle.portContainer}>
+        <div className={PortfolioStyle.portContainer} id="portfolioHash">
             <div className={PortfolioStyle.portTitle}>
                 <h2>Portfolio</h2>
             </div>

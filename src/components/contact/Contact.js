@@ -5,7 +5,7 @@ import ContactStyle from "./Contact.module.scss";
 
 export const Contact = () => {
     return (
-        <div className={ContactStyle.contactContainer}>
+        <div className={ContactStyle.contactContainer} id="contactHash"> 
             <div className={ContactStyle.fillerContainer}>
                 <img src={ContactFiller1} />
             </div>
