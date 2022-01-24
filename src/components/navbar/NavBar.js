@@ -28,7 +28,7 @@ export const NavBar = () => {
                         className ={NavStyle.linkStyle} 
                         to="../contact/Contact.js#contactHash"
                     >Contact</HashLink></li>
-                    <li><button className={NavStyle.buttonPushable}><span className={NavStyle.buttonFront}><a href={Resume} download="Jesse_McConnell_Resume">Download CV</a></span></button></li>
+                    <li><button className={NavStyle.buttonPushable}><a className={NavStyle.buttonFront} href={Resume} download="Jesse_McConnell_Resume">Download CV</a></button></li>
                 </ul>
             </div>
         </div>
