@@ -2,13 +2,13 @@
   @if $size == phone-only {
     @media (max-width: 500px) { @content; }
   } @else if $size == tablet-portrait-up {
-    @media (min-width: 501px) { @content; }
+    @media (min-width: 501px) and (max-width: 900px) { @content; }
   } @else if $size == tablet-landscape-up {
-    @media (min-width: 901px) { @content; }
+    @media (min-width: 901px) and (max-width: 1200px) { @content; }
   } @else if $size == desktop-up {
-    @media (min-width: 1201px) { @content; }
+    @media (min-width: 1201px) and (max-width: 1800) { @content; }
   } @else if $size == big-desktop-up {
-    @media (min-width: 1800px) { @content; }
+    @media (min-width: 1801px) { @content; }
   }
 }
 
@@ -25,6 +25,7 @@
 .textStyle1 {
     height: 50%;
     width: 55%;
+    font-size: 90px;
     font-weight: bold;
     position: absolute;
     display: flex;
@@ -55,9 +56,9 @@
 }
 
 .textStyle2 {
-    height: 65%;
+    height: 75%;
     width: 100%;
-    font-size: 75px;
+    font-size: 90px;
     font-weight: bold;
     position: absolute;
     display: flex;

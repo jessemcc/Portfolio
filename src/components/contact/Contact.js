@@ -19,8 +19,9 @@ export const Contact = () => {
                         <input type="text" name="name" placeholder="Name" /><br /> 
                         <label for="email">Email: </label>
                         <input type="text" name="email" placeholder="Email" />
+                        <textarea id="name" name="details" className={ContactStyle.textBox}>Please include details on project request</textarea>
+                        <button className={ContactStyle.buttonPushable}><span className={ContactStyle.buttonFront}>Submit</span></button>
                     </form>
-                    <textarea id="name" name="details" className={ContactStyle.textBox}>Please include details on project request</textarea>
                 </div>
             </div>
             <div className={ContactStyle.fillerContainer}>
