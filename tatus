@@ -1,0 +1,31 @@
+[33mcommit 464cca71f54e82b9fbdcb1ba0a0175d072327d99[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Jesse <jesse.mcconnell@live.ca>
+Date:   Mon Jan 24 08:47:59 2022 -0800
+
+    Fixed the look of buttons
+
+[1mdiff --git a/src/components/navbar/NavBar.js b/src/components/navbar/NavBar.js[m
+[1mindex bf573d4..deb88c5 100644[m
+[1m--- a/src/components/navbar/NavBar.js[m
+[1m+++ b/src/components/navbar/NavBar.js[m
+[36m@@ -28,7 +28,7 @@[m [mexport const NavBar = () => {[m
+                         className ={NavStyle.linkStyle} [m
+                         to="../contact/Contact.js#contactHash"[m
+                     >Contact</HashLink></li>[m
+[31m-                    <li><button className={NavStyle.buttonPushable}><span className={NavStyle.buttonFront}><a href={Resume} download="Jesse_McConnell_Resume">Download CV</a></span></button></li>[m
+[32m+[m[32m                    <li><button className={NavStyle.buttonPushable}><a className={NavStyle.buttonFront} href={Resume} download="Jesse_McConnell_Resume">Download CV</a></button></li>[m
+                 </ul>[m
+             </div>[m
+         </div>[m
+[1mdiff --git a/src/components/navbar/NavBar.module.scss b/src/components/navbar/NavBar.module.scss[m
+[1mindex c8671ce..fc4ea90 100644[m
+[1m--- a/src/components/navbar/NavBar.module.scss[m
+[1m+++ b/src/components/navbar/NavBar.module.scss[m
+[36m@@ -102,6 +102,7 @@[m
+     background-color: #0011D1;[m
+     color: white;[m
+     transform: translateY(-2.5px);[m
+[32m+[m[32m    text-decoration: none;[m
+ }[m
+ [m
+ .buttonPushable:active .buttonFront {[m
