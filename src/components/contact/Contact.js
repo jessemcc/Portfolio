@@ -28,10 +28,6 @@ export const Contact = () => {
                 alert('There was an error, please try again.', err);
         });
     };
-
-    const onClick = () => {
-        document.getElementById("reset-form").reset();
-    }
     
       const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -52,7 +48,7 @@ export const Contact = () => {
                         <input type="text" name="user_name" placeholder="Your Name" value={toSend.user_name} onChange={handleChange} /><br />
                         <input type="text" name="user_email" placeholder="Your Email" value={toSend.user_email} onChange={handleChange} /><br />
                         <textarea type="text" className={ContactStyle.textBox} name="message" value={toSend.message} onChange={handleChange}>Please include details on project request</textarea><br /> 
-                        <button type='submit' onClick={onClick} className={ContactStyle.buttonPushable}><span className={ContactStyle.buttonFront}>Submit</span></button>
+                        <button type='submit' className={ContactStyle.buttonPushable}><span className={ContactStyle.buttonFront}>Submit</span></button>
                     </form>
                 </div>
             </div>

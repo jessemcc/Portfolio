@@ -20,15 +20,14 @@
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: bottom;
-    margin-top: -50px;
+    padding-top: 1px;
 
     @include for-size (phone-only) {
         display: flex;
         flex-direction: column;
         background-image: none;
         height: 100%;
-        margin-top: 0;
-        padding-bottom: 20px;
+        padding: 20px 0;
     }
 
     @include for-size (tablet-portrait-up) {
